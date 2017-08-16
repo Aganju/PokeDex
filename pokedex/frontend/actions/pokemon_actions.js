@@ -5,7 +5,7 @@ export const RECEIVE_ALL_POKEMON = 'RECEIVE_ALL_POKEMON';
 export const requestAllPokemon = () => {
   return (dispatch) => {
     return APIUtil.fetchAllPokemon().then((allPokemon) => {
-      return dispatch(receiveAllPokemon(allPokemon));
+      dispatch(receiveAllPokemon(allPokemon));
     });
   };
 };
